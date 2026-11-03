@@ -19,8 +19,8 @@
 
 <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="images/villa-pool-p828.webp" media="(max-width: 760px)" imagesrcset="images/villa-pool-p828.webp 828w, images/villa-pool-p1242.webp 1242w" imagesizes="100vw">
-<link rel="preload" as="image" href="images/villa-pool-1920.webp" media="(min-width: 761px)" imagesrcset="images/villa-pool-1280.webp 1280w, images/villa-pool-1920.webp 1920w" imagesizes="100vw">
+<link rel="preload" as="image" href="images/night-villa-p828.webp" media="(max-width: 760px)" imagesrcset="images/night-villa-p828.webp 828w, images/night-villa-p1242.webp 1242w" imagesizes="100vw">
+<link rel="preload" as="image" href="images/night-villa-1920.webp" media="(min-width: 761px)" imagesrcset="images/night-villa-1280.webp 1280w, images/night-villa-1920.webp 1920w" imagesizes="100vw">
 
 <script type="application/ld+json">
 {
@@ -150,7 +150,7 @@ p{margin:0}
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:var(--paper);background:var(--ink);overflow:hidden;isolation:isolate}
 .hero__media{position:absolute;inset:0;z-index:-2}
-.hero__media img{width:100%;height:100%;object-fit:cover;object-position:62% 50%;transform:scale(1.06);animation:heroIn 2.6s var(--ease-out) .1s forwards}
+.hero__media img{width:100%;height:100%;object-fit:cover;object-position:45% 60%;transform:scale(1.06);animation:heroIn 2.6s var(--ease-out) .1s forwards}
 @keyframes heroIn{to{transform:scale(1)}}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
   linear-gradient(90deg,rgba(14,22,30,.55) 0%,rgba(14,22,30,.15) 55%,rgba(14,22,30,0) 75%),linear-gradient(180deg,rgba(14,22,30,.5) 0%,rgba(14,22,30,0) 20%,rgba(14,22,30,0) 38%,rgba(14,22,30,.55) 70%,rgba(14,22,30,.92) 100%)}
@@ -461,8 +461,8 @@ figure{margin:0}
 <section class="hero" id="top">
   <div class="hero__media">
     <picture>
-      <source media="(max-width: 760px)" srcset="images/villa-pool-p828.webp 828w, images/villa-pool-p1242.webp 1242w" sizes="100vw">
-      <img src="images/villa-pool-1920.webp" srcset="images/villa-pool-1280.webp 1280w, images/villa-pool-1920.webp 1920w" sizes="100vw" width="1920" height="1280" fetchpriority="high" decoding="async" data-i18n-alt="alt.hero" alt="Villa Žiganto: the white two-storey villa beside its private pool under a deep blue sky">
+      <source media="(max-width: 760px)" srcset="images/night-villa-p828.webp 828w, images/night-villa-p1242.webp 1242w" sizes="100vw">
+      <img src="images/night-villa-1920.webp" srcset="images/night-villa-1280.webp 1280w, images/night-villa-1920.webp 1920w" sizes="100vw" width="1920" height="1280" fetchpriority="high" decoding="async" data-i18n-alt="alt.hero" alt="Villa Žiganto at night: lit terraces and the illuminated pool under a deep blue evening sky">
     </picture>
   </div>
   <div class="wrap hero__in">
@@ -657,10 +657,10 @@ figure{margin:0}
           <figure class="ph"><img src="images/jacuzzi-view-640.webp" srcset="images/jacuzzi-view-640.webp 640w, images/jacuzzi-view-1280.webp 1280w" sizes="100vw" width="640" height="427" loading="lazy" decoding="async" alt=""></figure>
         </article>
         <article class="step" data-step="4">
-          <p class="step__time">19:30</p>
-          <h3 data-i18n="d5.t">Dinner by the grill</h3>
-          <p data-i18n="d5.p">The grill is hot, the table is set and the hills fade to blue. Dinner outside, again.</p>
-          <figure class="ph"><img src="images/grill-table-640.webp" srcset="images/grill-table-640.webp 640w, images/grill-table-1280.webp 1280w" sizes="100vw" width="640" height="427" loading="lazy" decoding="async" alt=""></figure>
+          <p class="step__time">21:00</p>
+          <h3 data-i18n="d5.t">The villa lights up</h3>
+          <p data-i18n="d5.p">Pool lights on, terraces warm, the hills fading to blue. Dinner outside, again.</p>
+          <figure class="ph"><img src="images/night-villa-pool-640.webp" srcset="images/night-villa-pool-640.webp 640w, images/night-villa-pool-1280.webp 1280w" sizes="100vw" width="640" height="427" loading="lazy" decoding="async" alt=""></figure>
         </article>
       </div>
       <div class="day__stage" aria-hidden="true">
@@ -668,7 +668,7 @@ figure{margin:0}
         <img src="images/pool-shower-1280.webp" srcset="images/pool-shower-1280.webp 1280w, images/pool-shower-1920.webp 1920w" sizes="58vw" width="1280" height="853" loading="lazy" decoding="async" alt="">
         <img src="images/pergola-dining-1280.webp" srcset="images/pergola-dining-1280.webp 1280w, images/pergola-dining-1920.webp 1920w" sizes="58vw" width="1280" height="1920" loading="lazy" decoding="async" alt="">
         <img src="images/jacuzzi-view-1280.webp" srcset="images/jacuzzi-view-1280.webp 1280w, images/jacuzzi-view-1920.webp 1920w" sizes="58vw" width="1280" height="853" loading="lazy" decoding="async" alt="">
-        <img src="images/grill-table-1280.webp" srcset="images/grill-table-1280.webp 1280w, images/grill-table-1920.webp 1920w" sizes="58vw" width="1280" height="853" loading="lazy" decoding="async" alt="">
+        <img src="images/night-villa-pool-1280.webp" srcset="images/night-villa-pool-1280.webp 1280w, images/night-villa-pool-1920.webp 1920w" sizes="58vw" width="1280" height="853" loading="lazy" decoding="async" alt="">
         <div class="day__clock"><i class="on"></i><i></i><i></i><i></i><i></i></div>
       </div>
     </div>
@@ -690,7 +690,7 @@ figure{margin:0}
       <figure class="ph o2 rv-img"><img src="images/pergola-dining-1280.webp" srcset="images/pergola-dining-640.webp 640w, images/pergola-dining-1280.webp 1280w" sizes="(min-width:1100px) 42vw, 50vw" width="1280" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.terrace" alt="Covered dining table on the terrace beside the pool"></figure>
       <figure class="ph o3 rv-img"><img src="images/summer-kitchen-640.webp" srcset="images/summer-kitchen-640.webp 640w, images/summer-kitchen-1280.webp 1280w" sizes="(min-width:1100px) 17vw, 50vw" width="640" height="427" loading="lazy" decoding="async" data-i18n-alt="alt.kitchenOut" alt="Summer kitchen with a gas grill and sink"></figure>
       <figure class="ph o4 rv-img"><img src="images/garden-olive-640.webp" srcset="images/garden-olive-640.webp 640w, images/garden-olive-1280.webp 1280w" sizes="(min-width:1100px) 25vw, 50vw" width="640" height="427" loading="lazy" decoding="async" data-i18n-alt="alt.garden" alt="Lawn with an olive tree and stepping stones, sea in the distance"></figure>
-      <figure class="ph o5 rv-img"><img src="images/pool-shower-1280.webp" srcset="images/pool-shower-640.webp 640w, images/pool-shower-1280.webp 1280w" sizes="(min-width:1100px) 33vw, 50vw" width="1280" height="853" loading="lazy" decoding="async" alt=""></figure>
+      <figure class="ph o5 rv-img"><img src="images/night-pool-bay-1280.webp" srcset="images/night-pool-bay-640.webp 640w, images/night-pool-bay-1280.webp 1280w" sizes="(min-width:1100px) 33vw, 50vw" width="1280" height="853" loading="lazy" decoding="async" alt=""></figure>
       <figure class="ph o6 rv-img"><img src="images/villa-pool-1280.webp" srcset="images/villa-pool-640.webp 640w, images/villa-pool-1280.webp 1280w, images/villa-pool-1920.webp 1920w" sizes="(min-width:1100px) 67vw, 50vw" width="1280" height="853" loading="lazy" decoding="async" alt=""></figure>
     </div>
     <div class="out__list">
@@ -760,7 +760,7 @@ figure{margin:0}
         <p class="label rv" data-i18n="g.label">08 — Gallery</p>
         <h2 class="rv" style="margin-top:1.5rem" data-i18n="g.title">Take a <em>look around</em>.</h2>
       </div>
-      <p class="lead rv" data-i18n="g.lead">Thirty photographs of the villa, inside and out.</p>
+      <p class="lead rv" data-i18n="g.lead">Thirty-eight photographs of the villa, inside and out.</p>
     </div>
     <div class="gal__filters" role="group" data-i18n-attr="aria-label:g.filter">
       <button class="chip" type="button" data-f="all" aria-pressed="true" data-i18n="g.all">All</button>
@@ -794,7 +794,7 @@ figure{margin:0}
 
 <!-- INQUIRY -->
 <section class="sec inq inv" id="inquiry">
-  <div class="inq__bg" aria-hidden="true"><img src="images/pool-shower-1280.webp" width="1280" height="853" loading="lazy" decoding="async" alt=""></div>
+  <div class="inq__bg" aria-hidden="true"><img src="images/night-pool-wine-1280.webp" width="1280" height="853" loading="lazy" decoding="async" alt=""></div>
   <div class="wrap inq__grid">
     <div>
       <p class="label rv" data-i18n="q.label">10 — Inquiry</p>
@@ -862,7 +862,7 @@ figure{margin:0}
 </div>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" data-i18n-attr="aria-label:g.lb" aria-label="Photo viewer" hidden>
-  <div class="lb__top"><span id="lbCount">1 / 30</span><button type="button" id="lbClose" data-i18n-attr="aria-label:g.close" aria-label="Close"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
+  <div class="lb__top"><span id="lbCount">1 / 38</span><button type="button" id="lbClose" data-i18n-attr="aria-label:g.close" aria-label="Close"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
   <figure class="lb__fig"><img id="lbImg" alt=""></figure>
   <p class="lb__cap" id="lbCap"></p>
   <button class="lb__nav lb__prev" type="button" id="lbPrev" data-i18n-attr="aria-label:g.prev" aria-label="Previous photo"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.6"/></svg></button>
@@ -885,7 +885,7 @@ const DE = {
   'hero.title':'Über der <em>Kvarner Bucht</em>',
   'hero.lead':'Eine private Villa mit eigenem Pool, 250&nbsp;m² voller Licht und der ganzen Bucht zu Ihren Füßen — sieben Kilometer oberhalb von Opatija.',
   'm.area':'Wohnfläche','m.beds':'Schlafzimmer &amp; Bäder','m.poolv':'Privat','m.pool':'Pool mit Meerblick','m.rating':'Booking.com · 2 Bewertungen',
-  'alt.hero':'Villa Žiganto: die weiße zweistöckige Villa am privaten Pool unter tiefblauem Himmel',
+  'alt.hero':'Villa Žiganto am Abend: beleuchtete Terrassen und Pool unter tiefblauem Abendhimmel',
   'intro.label':'01 — Die Villa',
   'intro.title':'Ländliche Ruhe. <em>Die Adria</em> in jedem Fenster.',
   'intro.p1':'Die Villa Žiganto liegt im Dorf Poljane, in den grünen Hügeln über Opatija — ein ruhiger, privater Rückzugsort mit Blick auf die Adria und die Kvarner Bucht aus fast jeder Ecke.',
@@ -910,7 +910,7 @@ const DE = {
   'd2.t':'Das erste Bad','d2.p':'Sonnenliegen, eine Außendusche und der Horizont des Kvarner direkt am Beckenrand.',
   'd3.t':'Mittagessen unter der Pergola','d3.p':'Die überdachte Sommerküche hat eine eigene Spüle und einen Gasgrill — das Mittagessen muss nie nach drinnen.',
   'd4.t':'Zeit für den Whirlpool','d4.p':'Warmes Wasser, kühles Glas und das Licht über der Bucht, das langsam golden wird.',
-  'd5.t':'Abendessen am Grill','d5.p':'Der Grill ist heiß, der Tisch gedeckt, die Hügel verblassen in Blau. Abendessen draußen — natürlich.',
+  'd5.t':'Die Villa leuchtet','d5.p':'Poolbeleuchtung an, warme Terrassen, die Hügel verblassen in Blau. Abendessen draußen — natürlich.',
   'o.label':'05 — Draußen','o.title':'Pool, Terrasse <em>&amp; Garten</em>.','o.lead':'Das Leben spielt sich hier draußen ab — vom ersten Bad bis zum Abendessen unter der Pergola.',
   'alt.pool':'Privater Pool mit Sonnenliegen neben der Villa','alt.terrace':'Überdachter Esstisch auf der Terrasse neben dem Pool','alt.kitchenOut':'Sommerküche mit Gasgrill und Spüle','alt.garden':'Rasen mit Olivenbaum und Trittsteinen, Meer in der Ferne',
   'o1.t':'Privater Pool','o1.p':'Im Freien und saisonal, mit Sonnenliegen auf einer Terrasse mit freiem Blick aufs Meer.',
@@ -926,7 +926,7 @@ const DE = {
   'r.c1':'Sauberkeit','r.c2':'Komfort','r.c3':'Ausstattung','r.c4':'Personal','r.c5':'Preis-Leistungs-Verhältnis','r.c6':'Lage','r.v88':'8,8',
   'r.q':'Qualitätsbewertung von Booking.com, basierend auf Ausstattung, Größe, Lage und Service.',
   
-  'g.label':'08 — Galerie','g.title':'Schauen Sie sich <em>um</em>.','g.lead':'Dreißig Fotos der Villa, innen und außen.','g.filter':'Fotos filtern',
+  'g.label':'08 — Galerie','g.title':'Schauen Sie sich <em>um</em>.','g.lead':'Achtunddreißig Fotos der Villa, innen und außen.','g.filter':'Fotos filtern',
   'g.all':'Alle','g.in':'Innen','g.bed':'Schlafzimmer &amp; Bäder','g.out':'Pool &amp; Garten','g.view':'Aussicht','g.more':'Alle Fotos zeigen','g.less':'Weniger zeigen',
   'g.lb':'Fotoansicht','g.close':'Schließen','g.prev':'Vorheriges Foto','g.next':'Nächstes Foto',
   'i.label':'09 — Gut zu wissen','i.title':'Vor Ihrer <em>Anreise</em>.',
@@ -952,7 +952,7 @@ const HR = {
   'hero.title':'Iznad <em>Kvarnerskog zaljeva</em>',
   'hero.lead':'Privatna vila s vlastitim bazenom, 250&nbsp;m² prostora punog svjetla i cijeli zaljev pod vama — sedam kilometara iznad Opatije.',
   'm.area':'Stambeni prostor','m.beds':'Spavaće sobe i kupaonice','m.poolv':'Privatni','m.pool':'Bazen s pogledom na more','m.rating':'Booking.com · 2 recenzije',
-  'alt.hero':'Vila Žiganto: bijela dvokatnica uz privatni bazen pod tamnoplavim nebom',
+  'alt.hero':'Vila Žiganto noću: osvijetljene terase i bazen pod tamnoplavim večernjim nebom',
   'intro.label':'01 — Vila',
   'intro.title':'Mir sela. <em>Jadran</em> u svakom prozoru.',
   'intro.p1':'Villa Žiganto smještena je u selu Poljane, u zelenim brdima iznad Opatije — mirno, privatno utočište s pogledom na Jadran i Kvarnerski zaljev iz gotovo svakog kutka.',
@@ -977,7 +977,7 @@ const HR = {
   'd2.t':'Prvo kupanje','d2.p':'Ležaljke, vanjski tuš i kvarnerski horizont odmah na rubu bazena.',
   'd3.t':'Ručak pod pergolom','d3.p':'Natkrivena ljetna kuhinja ima vlastiti sudoper i plinski roštilj — ručak se nikad ne mora seliti unutra.',
   'd4.t':'Vrijeme za jacuzzi','d4.p':'Topla voda, hladno staklo i svjetlo nad zaljevom koje polako postaje zlatno.',
-  'd5.t':'Večera uz roštilj','d5.p':'Roštilj je vruć, stol postavljen, a brda blijede u plavo. Večera vani — naravno.',
+  'd5.t':'Vila zasvijetli','d5.p':'Upaljena svjetla u bazenu, tople terase, brda koja blijede u plavo. Večera vani — naravno.',
   'o.label':'05 — Vani','o.title':'Bazen, terasa <em>i vrt</em>.','o.lead':'Ovdje se živi vani — od prvog kupanja do večere pod pergolom.',
   'alt.pool':'Privatni bazen s ležaljkama uz vilu','alt.terrace':'Natkriveni stol za objedovanje na terasi uz bazen','alt.kitchenOut':'Ljetna kuhinja s plinskim roštiljem i sudoperom','alt.garden':'Travnjak sa stablom masline i stazom od kamenih ploča, more u daljini',
   'o1.t':'Privatni bazen','o1.p':'Vanjski i sezonski, s ležaljkama na terasi koja gleda ravno na more.',
@@ -993,7 +993,7 @@ const HR = {
   'r.c1':'Čistoća','r.c2':'Udobnost','r.c3':'Sadržaji','r.c4':'Osoblje','r.c5':'Vrijednost za novac','r.c6':'Lokacija','r.v88':'8,8',
   'r.q':'Ocjena kvalitete Booking.com, na temelju sadržaja, veličine, lokacije i usluga.',
   
-  'g.label':'08 — Galerija','g.title':'Razgledajte <em>vilu</em>.','g.lead':'Trideset fotografija vile, iznutra i izvana.','g.filter':'Filtriraj fotografije',
+  'g.label':'08 — Galerija','g.title':'Razgledajte <em>vilu</em>.','g.lead':'Trideset i osam fotografija vile, iznutra i izvana.','g.filter':'Filtriraj fotografije',
   'g.all':'Sve','g.in':'Interijer','g.bed':'Sobe i kupaonice','g.out':'Bazen i vrt','g.view':'Pogledi','g.more':'Prikaži sve fotografije','g.less':'Prikaži manje',
   'g.lb':'Pregled fotografija','g.close':'Zatvori','g.prev':'Prethodna fotografija','g.next':'Sljedeća fotografija',
   'i.label':'09 — Dobro je znati','i.title':'Prije <em>dolaska</em>.',
@@ -1019,7 +1019,7 @@ const IT = {
   'hero.title':'Sopra il <em>Golfo del Quarnero</em>',
   'hero.lead':'Una villa privata con piscina propria, 250&nbsp;m² di spazi luminosi e tutto il golfo ai vostri piedi — sette chilometri sopra Opatija.',
   'm.area':'Superficie abitabile','m.beds':'Camere e bagni','m.poolv':'Privata','m.pool':'Piscina vista mare','m.rating':'Booking.com · 2 recensioni',
-  'alt.hero':'Villa Žiganto: la villa bianca su due piani accanto alla piscina privata sotto un cielo blu intenso',
+  'alt.hero':'Villa Žiganto di sera: terrazze illuminate e piscina accesa sotto un cielo blu intenso',
   'intro.label':'01 — La villa',
   'intro.title':'La quiete della campagna. <em>L’Adriatico</em> in ogni finestra.',
   'intro.p1':'Villa Žiganto si trova nel villaggio di Poljane, sulle verdi colline sopra Opatija — un rifugio tranquillo e riservato, con vista sull’Adriatico e sul Golfo del Quarnero da quasi ogni angolo.',
@@ -1044,7 +1044,7 @@ const IT = {
   'd2.t':'Il primo tuffo','d2.p':'Lettini, una doccia esterna e l’orizzonte del Quarnero proprio sul bordo dell’acqua.',
   'd3.t':'Pranzo sotto la pergola','d3.p':'La cucina estiva coperta ha il suo lavello e il barbecue a gas — il pranzo non deve mai spostarsi dentro.',
   'd4.t':'L’ora dell’idromassaggio','d4.p':'Acqua calda, vetro fresco e la luce sul golfo che pian piano diventa oro.',
-  'd5.t':'Cena accanto al barbecue','d5.p':'Il barbecue è acceso, la tavola apparecchiata e le colline sfumano nel blu. Cena all’aperto, ancora una volta.',
+  'd5.t':'La villa si illumina','d5.p':'Luci della piscina accese, terrazze calde, le colline che sfumano nel blu. Cena all’aperto, ancora una volta.',
   'o.label':'05 — Esterni','o.title':'Piscina, terrazza <em>e giardino</em>.','o.lead':'Qui la vita si svolge all’aperto — dal primo tuffo alla cena sotto la pergola.',
   'alt.pool':'Piscina privata con lettini accanto alla villa','alt.terrace':'Tavolo da pranzo coperto sulla terrazza accanto alla piscina','alt.kitchenOut':'Cucina estiva con barbecue a gas e lavello','alt.garden':'Prato con ulivo e camminamento in pietra, mare in lontananza',
   'o1.t':'Piscina privata','o1.p':'All’aperto e stagionale, con lettini su una terrazza affacciata direttamente sul mare.',
@@ -1060,7 +1060,7 @@ const IT = {
   'r.c1':'Pulizia','r.c2':'Comfort','r.c3':'Servizi','r.c4':'Staff','r.c5':'Rapporto qualità-prezzo','r.c6':'Posizione','r.v88':'8,8',
   'r.q':'Valutazione di qualità di Booking.com, basata su servizi, dimensioni, posizione e prestazioni.',
   
-  'g.label':'08 — Galleria','g.title':'Date <em>un’occhiata</em>.','g.lead':'Trenta fotografie della villa, dentro e fuori.','g.filter':'Filtra le foto',
+  'g.label':'08 — Galleria','g.title':'Date <em>un’occhiata</em>.','g.lead':'Trentotto fotografie della villa, dentro e fuori.','g.filter':'Filtra le foto',
   'g.all':'Tutte','g.in':'Interni','g.bed':'Camere e bagni','g.out':'Piscina ed esterni','g.view':'Panorami','g.more':'Mostra tutte le foto','g.less':'Mostra meno',
   'g.lb':'Visualizzatore foto','g.close':'Chiudi','g.prev':'Foto precedente','g.next':'Foto successiva',
   'i.label':'09 — Buono a sapersi','i.title':'Prima del vostro <em>arrivo</em>.',
@@ -1109,14 +1109,16 @@ const CAP = {
   location:{en:'Location above the Opatija Riviera',de:'Lage über der Riviera von Opatija',hr:'Položaj iznad Opatijske rivijere',it:'Posizione sopra la Riviera di Opatija'}
 };
 const GAL = [
-  ['villa-pool','out','pool',1],['living-sofa','in','living'],['bedroom-rose-view','bed','bedroom'],['pool-edge','view','view',1],
+  ['villa-pool','out','pool',1],['living-sofa','in','living'],['bedroom-rose-view','bed','bedroom'],['night-pool-bay','view','pool',1],
   ['jacuzzi-view','in','jacuzzi'],['pergola-dining','out','terrace'],['kitchen-dining','in','dining'],['bedroom-grey-view','bed','bedroom'],
   ['balcony-view','view','balcony',1],['pool-garden','out','pool',1],['bath-wood','bed','bath'],['living-tv','in','living'],
   ['bedroom-print','bed','bedroom'],['dining-kitchen','in','kitchen'],['pool-shower','view','view'],['summer-kitchen','out','kitchenOut'],
-  ['exterior-pool','out','pool',1],['bedroom-blue','bed','bedroom'],['jacuzzi-room','in','jacuzzi'],['garden-olive','out','garden',1],
-  ['hall-stairs','in','hall'],['bedroom-leopard-art','bed','bedroom'],['bath-round','bed','bath'],['grill-table','out','terrace'],
-  ['terrace-lounge','out','terrace'],['bedroom-rose','bed','bedroom'],['bedroom-leopard','bed','bedroom'],['bath-shelf','bed','bath'],
-  ['bedroom-grey','bed','bedroom'],['bath-shower','bed','bath']
+  ['night-villa-pool','out','dusk',1],['bedroom-blue','bed','bedroom'],['jacuzzi-room','in','jacuzzi'],['exterior-pool','out','pool',1],
+  ['hall-stairs','in','hall'],['night-pool-wine','out','pool'],['pool-edge','view','view'],['bedroom-leopard-art','bed','bedroom'],
+  ['night-jacuzzi','in','jacuzzi'],['bath-round','bed','bath'],['grill-table','out','terrace'],['garden-olive','out','garden'],
+  ['night-garden-olive','out','garden'],['terrace-lounge','out','terrace'],['bedroom-rose','bed','bedroom'],['night-garden-rocks','out','garden'],
+  ['bedroom-leopard','bed','bedroom'],['bath-shelf','bed','bath'],['night-pool-edge','out','pool'],['bedroom-grey','bed','bedroom'],
+  ['night-villa','out','dusk'],['bath-shower','bed','bath']
 ];
 
 (() => {
