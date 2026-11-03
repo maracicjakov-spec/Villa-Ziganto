@@ -32,6 +32,8 @@
   "image": "https://villa-ziganto.vercel.app/images/og-image.jpg",
   "address": {"@type": "PostalAddress", "streetAddress": "Poljane 62", "postalCode": "51414", "addressLocality": "Opatija", "addressCountry": "HR"},
   "geo": {"@type": "GeoCoordinates", "latitude": 45.3188963, "longitude": 14.2708245},
+  "telephone": "+385 98 297 179",
+  "email": "arnold.ziganto@gmail.com",
   "checkinTime": "16:00", "checkoutTime": "10:00",
   "petsAllowed": false,
   "containsPlace": {"@type": "Accommodation", "floorSize": {"@type": "QuantitativeValue", "value": 250, "unitCode": "MTK"}, "numberOfBedrooms": 4, "numberOfBathroomsTotal": 4},
@@ -372,6 +374,12 @@ figure{margin:0}
 .side{margin-top:var(--s-5);padding:var(--s-4);border:1px solid var(--line-inv);border-radius:var(--r-3);background:rgba(22,33,43,.6)}
 .side h3{font-size:1.6rem;margin-bottom:.5rem}
 .side p{color:var(--muted-inv);font-size:var(--fs-1);margin-bottom:var(--s-3)}
+.direct{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-inv)}
+.direct li{display:grid;gap:.2rem;padding:var(--s-2) 0;border-bottom:1px solid var(--line-inv)}
+.direct span{font-size:var(--fs-0);letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted-inv)}
+.direct a{font-family:var(--serif);font-size:clamp(1.3rem,1.1rem + .8vw,1.75rem);line-height:1.2;text-decoration:none;overflow-wrap:anywhere;transition:color .3s}
+.direct a:hover{color:var(--glow)}
+.direct a.direct__mail{font-size:clamp(1.15rem,1rem + .6vw,1.5rem);overflow-wrap:normal}
 .form{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s-3) var(--s-2);padding:var(--s-4);background:var(--paper);color:var(--text);border-radius:var(--r-3);box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
 .field{display:flex;flex-direction:column;gap:.4rem;grid-column:1/-1}
 .field.half{grid-column:span 1}
@@ -381,15 +389,10 @@ figure{margin:0}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(227,135,90,.35)}
 .field [aria-invalid="true"]{border-color:#B3261E}
 .err{font-size:var(--fs-0);color:#B3261E;min-height:0}
-.check{grid-column:1/-1;display:flex;gap:.75rem;align-items:flex-start;font-size:var(--fs-1);color:var(--muted)}
-.check input{width:20px;height:20px;margin-top:.2rem;accent-color:var(--ink);flex:none}
 .form .btn{grid-column:1/-1;width:100%}
 .status{grid-column:1/-1;padding:var(--s-2);border-radius:var(--r-2);font-size:var(--fs-1)}
 .status.ok{background:#E3F1E6;color:#1E4D2B}
-.status.demo{background:#FBEDE3;color:#6D3417}
-.status.bad{background:#F9E1DF;color:#7A1C16}
 .status a{font-weight:600}
-.hp{position:absolute;left:-5000px}
 @media (max-width:479px){.field.half{grid-column:1/-1}.form{padding:var(--s-3)}}
 @media (min-width:960px){.inq__grid{grid-template-columns:5fr 6fr;gap:var(--s-6);align-items:start}}
 
@@ -397,7 +400,7 @@ figure{margin:0}
 .ftr{background:var(--ink);color:var(--paper);padding:var(--s-6) 0 calc(var(--s-4) + 72px + var(--safe-b));border-top:1px solid var(--line-inv)}
 .ftr__mark{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(3.2rem,1.5rem + 9vw,11rem);line-height:.9;letter-spacing:-.04em}
 .ftr__grid{display:grid;gap:var(--s-4);margin-top:var(--s-5);padding-top:var(--s-4);border-top:1px solid var(--line-inv);font-size:var(--fs-1);color:var(--muted-inv)}
-.ftr__grid a{text-decoration:none}
+.ftr__grid a{text-decoration:none;overflow-wrap:anywhere}
 .ftr__grid a:hover{color:var(--paper)}
 .ftr__grid ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
 .ftr__grid h4{font-family:var(--sans);font-size:var(--fs-0);letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--paper);margin-bottom:.75rem}
@@ -438,7 +441,7 @@ figure{margin:0}
       <button type="button" data-lang="hr" aria-pressed="false">HR</button>
       <button type="button" data-lang="it" aria-pressed="false">IT</button>
     </div>
-    <a class="btn" data-book href="#" target="_blank" rel="noopener" data-i18n="cta.book">Check availability</a>
+    <a class="btn" href="#inquiry" data-i18n="cta.book">Check availability</a>
     <button class="burger" type="button" aria-controls="mnav" aria-expanded="false" data-i18n-attr="aria-label:menu"><i></i></button>
   </div>
 </header>
@@ -450,7 +453,7 @@ figure{margin:0}
   <a href="#location"><em>04</em><span data-i18n="nav.location">Location</span></a>
   <a href="#gallery"><em>05</em><span data-i18n="nav.gallery">Gallery</span></a>
   <a href="#inquiry"><em>06</em><span data-i18n="nav.inquiry">Inquiry</span></a>
-  <a class="btn btn--glow" data-book href="#" target="_blank" rel="noopener" data-i18n="cta.book">Check availability</a>
+  <a class="btn btn--glow" href="#inquiry" data-i18n="cta.book">Check availability</a>
 </div>
 
 <main id="main">
@@ -467,8 +470,8 @@ figure{margin:0}
     <h1 data-in style="animation-delay:.4s" data-i18n="hero.title">Above the <em>Kvarner Bay</em></h1>
     <p class="hero__lead" data-in style="animation-delay:.6s" data-i18n="hero.lead">A private villa with its own pool, 250&nbsp;m² of light-filled space and the whole bay below you — seven kilometres above Opatija.</p>
     <div class="hero__ctas" data-in style="animation-delay:.75s">
-      <a class="btn btn--glow" data-book href="#" target="_blank" rel="noopener"><span data-i18n="cta.book">Check availability</span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
-      <a class="btn btn--ghost-inv" href="#inquiry" data-i18n="cta.inquire">Send an inquiry</a>
+      <a class="btn btn--glow" href="#inquiry"><span data-i18n="cta.book">Check availability</span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      <a class="btn btn--ghost-inv" href="tel:+38598297179"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.6 2.5H3.4a.9.9 0 0 0-.9 1C2.9 9 7 13.1 12.5 13.5a.9.9 0 0 0 1-.9v-2.2l-2.6-1-1.3 1.3A7.6 7.6 0 0 1 5.3 6.4l1.3-1.3-1-2.6Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg><span>+385 98 297 179</span></a>
     </div>
     <ul class="hero__meta" data-in style="animation-delay:.95s">
       <li><b>250 m²</b><span data-i18n="m.area">Living space</span></li>
@@ -797,26 +800,25 @@ figure{margin:0}
     <div>
       <p class="label rv" data-i18n="q.label">10 — Inquiry</p>
       <h2 class="rv" style="margin-top:1.5rem" data-i18n="q.title">Plan your <em>stay</em>.</h2>
-      <p class="lead rv" data-i18n="q.lead">Send your dates and we'll get back to you with availability and a price. Prefer to book right away? Use Booking.com.</p>
+      <p class="lead rv" data-i18n="q.lead">Fill in your dates and send the inquiry on WhatsApp — we’ll get back to you with availability and a price. Or simply give us a call.</p>
       <div class="side rv">
-        <h3 data-i18n="q.sideT">Instant booking</h3>
-        <p data-i18n="q.sideP">See live prices and availability for your dates on Booking.com.</p>
-        <a class="btn btn--glow" data-book href="#" target="_blank" rel="noopener"><span data-i18n="cta.book">Check availability</span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <h3 data-i18n="q.sideT">Book directly with us</h3>
+        <p data-i18n="q.sideP">Call or write — you’ll hear back from us personally, with no booking platform in between.</p>
+        <ul class="direct">
+          <li><span data-i18n="q.tel">Phone</span><a href="tel:+38598297179">+385 98 297 179</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/38598297179" target="_blank" rel="noopener">+385 98 297 179</a></li>
+          <li><span>E-mail</span><a class="direct__mail" href="mailto:arnold.ziganto@gmail.com">arnold.ziganto<wbr>@gmail.com</a></li>
+        </ul>
       </div>
     </div>
     <form class="form rv" id="form" novalidate>
       <div class="field"><label for="f-name" data-i18n="q.name">Full name</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><span class="err" id="e-name" aria-live="polite"></span></div>
-      <div class="field half"><label for="f-email" data-i18n="q.email">E-mail</label><input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email"><span class="err" id="e-email" aria-live="polite"></span></div>
-      <div class="field half"><label for="f-phone" data-i18n="q.phone">Phone (optional)</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
-      <div class="field half"><label for="f-in" data-i18n="q.in">Arrival</label><input id="f-in" name="arrival" type="date" required aria-describedby="e-in"><span class="err" id="e-in" aria-live="polite"></span></div>
+            <div class="field half"><label for="f-in" data-i18n="q.in">Arrival</label><input id="f-in" name="arrival" type="date" required aria-describedby="e-in"><span class="err" id="e-in" aria-live="polite"></span></div>
       <div class="field half"><label for="f-out" data-i18n="q.out">Departure</label><input id="f-out" name="departure" type="date" required aria-describedby="e-out"><span class="err" id="e-out" aria-live="polite"></span></div>
       <div class="field half"><label for="f-ad" data-i18n="q.adults">Adults</label><select id="f-ad" name="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
       <div class="field half"><label for="f-ch" data-i18n="q.kids">Children</label><select id="f-ch" name="children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
       <div class="field"><label for="f-msg" data-i18n="q.msg">Message</label><textarea id="f-msg" name="message" data-i18n-attr="placeholder:q.msgP" placeholder="Anything we should know — arrival time, ages of children, questions…"></textarea></div>
-      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label class="check"><input type="checkbox" id="f-ok" required aria-describedby="e-ok"><span data-i18n="q.consent">I agree that my details are used only to answer this inquiry.</span></label>
-      <span class="err" id="e-ok" aria-live="polite" style="grid-column:1/-1;margin-top:-1rem"></span>
-      <button class="btn" type="submit" id="f-submit"><span data-i18n="q.send">Send inquiry</span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <button class="btn" type="submit" id="f-submit"><span data-i18n="q.send">Send on WhatsApp</span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></button>
       <div class="status" id="f-status" role="status" hidden></div>
     </form>
   </div>
@@ -843,9 +845,11 @@ figure{margin:0}
         </ul>
       </div>
       <div>
-        <h4 data-i18n="ft.book">Book</h4>
+        <h4 data-i18n="ft.contact">Contact</h4>
         <ul>
-          <li><a data-book href="#" target="_blank" rel="noopener">Booking.com ↗</a></li>
+          <li><a href="tel:+38598297179">+385 98 297 179</a></li>
+          <li><a href="https://wa.me/38598297179" target="_blank" rel="noopener">WhatsApp ↗</a></li>
+          <li><a href="mailto:arnold.ziganto@gmail.com">arnold.ziganto@gmail.com</a></li>
           <li><a href="#inquiry" data-i18n="nav.inquiry">Inquiry</a></li>
           <li><a href="#top" data-i18n="ft.top">Back to top ↑</a></li>
         </ul>
@@ -855,8 +859,8 @@ figure{margin:0}
 </footer>
 
 <div class="mbar" id="mbar">
-  <a class="btn btn--glow" data-book href="#" target="_blank" rel="noopener" data-i18n="cta.bookS">Availability</a>
-  <a class="btn btn--ghost-inv" href="#inquiry" data-i18n="cta.inqS">Inquire</a>
+  <a class="btn btn--glow" href="#inquiry" data-i18n="cta.bookS">Availability</a>
+  <a class="btn btn--ghost-inv" href="tel:+38598297179"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.6 2.5H3.4a.9.9 0 0 0-.9 1C2.9 9 7 13.1 12.5 13.5a.9.9 0 0 0 1-.9v-2.2l-2.6-1-1.3 1.3A7.6 7.6 0 0 1 5.3 6.4l1.3-1.3-1-2.6Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg><span data-i18n="cta.call">Call</span></a>
 </div>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" data-i18n-attr="aria-label:g.lb" aria-label="Photo viewer" hidden>
@@ -870,17 +874,15 @@ figure{margin:0}
 <script>
 /* ===== Settings — edit before going live ===== */
 const CONFIG = {
-  // E-mail that receives inquiries (via FormSubmit). Empty = demo mode: nothing is sent.
-  inquiryEmail: '',
-  booking: 'https://www.booking.com/hotel/hr/villa-ziganto-with-saltwater-pool',
-  bookingSuffix: { en: '.en-gb.html', de: '.de.html', hr: '.hr.html', it: '.it.html' }
+  // Inquiries open WhatsApp with a prefilled message to this number (no e-mail service to activate).
+  whatsapp: 'https://wa.me/38598297179'
 };
 
 /* ===== Translations (EN lives in the markup) ===== */
 const DE = {
   'skip':'Zum Inhalt springen','menu':'Menü',
   'nav.villa':'Die Villa','nav.spaces':'Räume','nav.day':'Ein Tag hier','nav.location':'Lage','nav.gallery':'Galerie','nav.inquiry':'Anfrage',
-  'cta.book':'Verfügbarkeit prüfen','cta.inquire':'Anfrage senden','cta.bookS':'Verfügbarkeit','cta.inqS':'Anfragen',
+  'cta.book':'Verfügbarkeit prüfen','cta.inquire':'Anfrage senden','cta.bookS':'Verfügbarkeit','cta.inqS':'Anfragen','cta.call':'Anrufen',
   'hero.eyebrow':'Poljane · Riviera von Opatija · Kroatien',
   'hero.title':'Über der <em>Kvarner Bucht</em>',
   'hero.lead':'Eine private Villa mit eigenem Pool, 250&nbsp;m² voller Licht und der ganzen Bucht zu Ihren Füßen — sieben Kilometer oberhalb von Opatija.',
@@ -934,20 +936,20 @@ const DE = {
   'i.dep':'Kaution','i.depV':'500 € in bar','i.depN':'Zahlbar bei Ankunft und bei Abreise nach Kontrolle der Villa vollständig zurückerstattet.',
   'i.age':'Mindestalter','i.ageV':'26 Jahre für den Check-in','i.kids':'Kinder','i.kidsV':'Kinder jeden Alters willkommen','i.kidsN':'Babybett (0–2 Jahre) auf Anfrage kostenlos, je nach Verfügbarkeit. Keine Zustellbetten.',
   'i.rules':'Hausregeln','i.rulesV':'Nichtraucher · keine Partys · keine Haustiere',
-  'q.label':'10 — Anfrage','q.title':'Planen Sie Ihren <em>Aufenthalt</em>.','q.lead':'Senden Sie uns Ihre Reisedaten — wir melden uns mit Verfügbarkeit und Preis. Lieber sofort buchen? Nutzen Sie Booking.com.',
-  'q.sideT':'Sofort buchen','q.sideP':'Aktuelle Preise und Verfügbarkeit für Ihre Daten auf Booking.com.',
-  'q.name':'Vor- und Nachname','q.email':'E-Mail','q.phone':'Telefon (optional)','q.in':'Anreise','q.out':'Abreise','q.adults':'Erwachsene','q.kids':'Kinder','q.msg':'Nachricht',
-  'q.msgP':'Was sollten wir wissen — Ankunftszeit, Alter der Kinder, Fragen …','q.consent':'Ich bin einverstanden, dass meine Angaben nur zur Beantwortung dieser Anfrage verwendet werden.','q.send':'Anfrage senden',
-  'q.sending':'Wird gesendet …','q.ok':'Vielen Dank — Ihre Anfrage wurde gesendet. Wir antworten in Kürze.',
-  'q.demo':'Demo-Modus: Dieses Formular ist noch nicht verbunden, es wurde nichts gesendet. Bitte prüfen Sie die Verfügbarkeit auf <a data-book href="#" target="_blank" rel="noopener">Booking.com</a>.',
-  'q.bad':'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder buchen Sie über <a data-book href="#" target="_blank" rel="noopener">Booking.com</a>.',
-  'e.name':'Bitte geben Sie Ihren Namen ein.','e.email':'Bitte geben Sie eine gültige E-Mail-Adresse ein.','e.date':'Bitte wählen Sie ein Datum.','e.order':'Die Abreise muss nach der Anreise liegen.','e.past':'Das Datum darf nicht in der Vergangenheit liegen.','e.ok':'Bitte bestätigen Sie Ihr Einverständnis.',
-  'ft.addr':'Poljane 62, 51414 Opatija, Kroatien','ft.managed':'Verwaltet von Davorowski Holiday Homes','ft.explore':'Entdecken','ft.book':'Buchen','ft.top':'Nach oben ↑'
+  'q.label':'10 — Anfrage','q.title':'Planen Sie Ihren <em>Aufenthalt</em>.','q.lead':'Tragen Sie Ihre Reisedaten ein und senden Sie die Anfrage per WhatsApp — wir melden uns mit Verfügbarkeit und Preis. Oder rufen Sie uns einfach an.',
+  'q.sideT':'Direkt bei uns buchen','q.sideP':'Rufen Sie an oder schreiben Sie uns — Sie erhalten die Antwort persönlich von uns, ohne Buchungsplattform dazwischen.','q.tel':'Telefon',
+  'q.name':'Vor- und Nachname','q.in':'Anreise','q.out':'Abreise','q.adults':'Erwachsene','q.kids':'Kinder','q.msg':'Nachricht',
+  'q.msgP':'Was sollten wir wissen — Ankunftszeit, Alter der Kinder, Fragen …','q.send':'Per WhatsApp senden',
+  'q.ok':'WhatsApp öffnet sich mit Ihrer Anfrage — tippen Sie nur noch auf Senden. Nicht geöffnet? <a data-wa href="#" target="_blank" rel="noopener">WhatsApp öffnen</a>',
+  
+  
+  'e.name':'Bitte geben Sie Ihren Namen ein.','e.date':'Bitte wählen Sie ein Datum.','e.order':'Die Abreise muss nach der Anreise liegen.','e.past':'Das Datum darf nicht in der Vergangenheit liegen.',
+  'ft.addr':'Poljane 62, 51414 Opatija, Kroatien','ft.managed':'Verwaltet von Davorowski Holiday Homes','ft.explore':'Entdecken','ft.contact':'Kontakt','ft.top':'Nach oben ↑'
 };
 const HR = {
   'skip':'Preskoči na sadržaj','menu':'Izbornik',
   'nav.villa':'Vila','nav.spaces':'Prostori','nav.day':'Dan u vili','nav.location':'Lokacija','nav.gallery':'Galerija','nav.inquiry':'Upit',
-  'cta.book':'Provjeri dostupnost','cta.inquire':'Pošalji upit','cta.bookS':'Dostupnost','cta.inqS':'Upit',
+  'cta.book':'Provjeri dostupnost','cta.inquire':'Pošalji upit','cta.bookS':'Dostupnost','cta.inqS':'Upit','cta.call':'Nazovite',
   'hero.eyebrow':'Poljane · Opatijska rivijera · Hrvatska',
   'hero.title':'Iznad <em>Kvarnerskog zaljeva</em>',
   'hero.lead':'Privatna vila s vlastitim bazenom, 250&nbsp;m² prostora punog svjetla i cijeli zaljev pod vama — sedam kilometara iznad Opatije.',
@@ -1001,20 +1003,20 @@ const HR = {
   'i.dep':'Polog za štetu','i.depV':'500 € u gotovini','i.depN':'Plaća se pri dolasku i u cijelosti vraća pri odjavi, nakon pregleda vile.',
   'i.age':'Minimalna dob','i.ageV':'26 godina za prijavu','i.kids':'Djeca','i.kidsV':'Djeca svih dobi su dobrodošla','i.kidsN':'Dječji krevetić (0–2 godine) besplatno na zahtjev, ovisno o raspoloživosti. Nema pomoćnih ležajeva.',
   'i.rules':'Kućni red','i.rulesV':'Zabranjeno pušenje · bez zabava · bez kućnih ljubimaca',
-  'q.label':'10 — Upit','q.title':'Isplanirajte <em>boravak</em>.','q.lead':'Pošaljite nam datume, a mi ćemo vam se javiti s raspoloživošću i cijenom. Želite odmah rezervirati? Koristite Booking.com.',
-  'q.sideT':'Trenutačna rezervacija','q.sideP':'Pogledajte aktualne cijene i raspoloživost za svoje datume na Booking.com.',
-  'q.name':'Ime i prezime','q.email':'E-mail','q.phone':'Telefon (neobavezno)','q.in':'Dolazak','q.out':'Odlazak','q.adults':'Odrasli','q.kids':'Djeca','q.msg':'Poruka',
-  'q.msgP':'Što bismo trebali znati — vrijeme dolaska, dob djece, pitanja…','q.consent':'Slažem se da se moji podaci koriste isključivo za odgovor na ovaj upit.','q.send':'Pošalji upit',
-  'q.sending':'Šaljem…','q.ok':'Hvala — vaš upit je poslan. Javit ćemo vam se uskoro.',
-  'q.demo':'Demo način: obrazac još nije povezan pa ništa nije poslano. Provjerite raspoloživost na <a data-book href="#" target="_blank" rel="noopener">Booking.com</a>.',
-  'q.bad':'Nešto je pošlo po zlu. Pokušajte ponovno ili rezervirajte na <a data-book href="#" target="_blank" rel="noopener">Booking.com</a>.',
-  'e.name':'Upišite svoje ime.','e.email':'Upišite ispravnu e-mail adresu.','e.date':'Odaberite datum.','e.order':'Odlazak mora biti nakon dolaska.','e.past':'Datum ne može biti u prošlosti.','e.ok':'Molimo potvrdite suglasnost.',
-  'ft.addr':'Poljane 62, 51414 Opatija, Hrvatska','ft.managed':'Vilom upravlja Davorowski Holiday Homes','ft.explore':'Istražite','ft.book':'Rezervacija','ft.top':'Na vrh ↑'
+  'q.label':'10 — Upit','q.title':'Isplanirajte <em>boravak</em>.','q.lead':'Upišite datume i pošaljite upit na WhatsApp — javit ćemo vam se s raspoloživošću i cijenom. Ili nas jednostavno nazovite.',
+  'q.sideT':'Rezervirajte izravno kod nas','q.sideP':'Nazovite ili pišite — odgovor dobivate osobno od nas, bez posredničke platforme.','q.tel':'Telefon',
+  'q.name':'Ime i prezime','q.in':'Dolazak','q.out':'Odlazak','q.adults':'Odrasli','q.kids':'Djeca','q.msg':'Poruka',
+  'q.msgP':'Što bismo trebali znati — vrijeme dolaska, dob djece, pitanja…','q.send':'Pošalji na WhatsApp',
+  'q.ok':'Otvara se WhatsApp s vašim upitom — samo pritisnite Pošalji. Nije se otvorio? <a data-wa href="#" target="_blank" rel="noopener">Otvori WhatsApp</a>',
+  
+  
+  'e.name':'Upišite svoje ime.','e.date':'Odaberite datum.','e.order':'Odlazak mora biti nakon dolaska.','e.past':'Datum ne može biti u prošlosti.',
+  'ft.addr':'Poljane 62, 51414 Opatija, Hrvatska','ft.managed':'Vilom upravlja Davorowski Holiday Homes','ft.explore':'Istražite','ft.contact':'Kontakt','ft.top':'Na vrh ↑'
 };
 const IT = {
   'skip':'Vai al contenuto','menu':'Menu',
   'nav.villa':'La villa','nav.spaces':'Spazi','nav.day':'Una giornata qui','nav.location':'Posizione','nav.gallery':'Galleria','nav.inquiry':'Richiesta',
-  'cta.book':'Verifica disponibilità','cta.inquire':'Invia una richiesta','cta.bookS':'Disponibilità','cta.inqS':'Richiedi',
+  'cta.book':'Verifica disponibilità','cta.inquire':'Invia una richiesta','cta.bookS':'Disponibilità','cta.inqS':'Richiedi','cta.call':'Chiama',
   'hero.eyebrow':'Poljane · Riviera di Opatija · Croazia',
   'hero.title':'Sopra il <em>Golfo del Quarnero</em>',
   'hero.lead':'Una villa privata con piscina propria, 250&nbsp;m² di spazi luminosi e tutto il golfo ai vostri piedi — sette chilometri sopra Opatija.',
@@ -1068,23 +1070,23 @@ const IT = {
   'i.dep':'Deposito cauzionale','i.depV':'500 € in contanti','i.depN':'Da versare all’arrivo, restituito per intero al check-out dopo il controllo della villa.',
   'i.age':'Età minima','i.ageV':'26 anni per il check-in','i.kids':'Bambini','i.kidsV':'Benvenuti bambini di tutte le età','i.kidsN':'Culla (0–2 anni) gratuita su richiesta, in base alla disponibilità. Nessun letto supplementare.',
   'i.rules':'Regole della casa','i.rulesV':'Vietato fumare · niente feste · niente animali',
-  'q.label':'10 — Richiesta','q.title':'Pianificate il vostro <em>soggiorno</em>.','q.lead':'Inviateci le vostre date e vi risponderemo con disponibilità e prezzo. Preferite prenotare subito? Usate Booking.com.',
-  'q.sideT':'Prenotazione immediata','q.sideP':'Prezzi e disponibilità aggiornati per le vostre date su Booking.com.',
-  'q.name':'Nome e cognome','q.email':'E-mail','q.phone':'Telefono (facoltativo)','q.in':'Arrivo','q.out':'Partenza','q.adults':'Adulti','q.kids':'Bambini','q.msg':'Messaggio',
-  'q.msgP':'Cosa dovremmo sapere — orario di arrivo, età dei bambini, domande…','q.consent':'Acconsento all’uso dei miei dati esclusivamente per rispondere a questa richiesta.','q.send':'Invia richiesta',
-  'q.sending':'Invio in corso…','q.ok':'Grazie — la vostra richiesta è stata inviata. Vi risponderemo a breve.',
-  'q.demo':'Modalità demo: questo modulo non è ancora collegato, quindi non è stato inviato nulla. Verificate la disponibilità su <a data-book href="#" target="_blank" rel="noopener">Booking.com</a>.',
-  'q.bad':'Qualcosa è andato storto. Riprovate oppure prenotate su <a data-book href="#" target="_blank" rel="noopener">Booking.com</a>.',
-  'e.name':'Inserite il vostro nome.','e.email':'Inserite un indirizzo e-mail valido.','e.date':'Scegliete una data.','e.order':'La partenza deve essere successiva all’arrivo.','e.past':'La data non può essere nel passato.','e.ok':'Confermate il consenso.',
-  'ft.addr':'Poljane 62, 51414 Opatija, Croazia','ft.managed':'Gestita da Davorowski Holiday Homes','ft.explore':'Esplora','ft.book':'Prenota','ft.top':'Torna su ↑'
+  'q.label':'10 — Richiesta','q.title':'Pianificate il vostro <em>soggiorno</em>.','q.lead':'Inserite le date e inviate la richiesta su WhatsApp — vi risponderemo con disponibilità e prezzo. Oppure chiamateci.',
+  'q.sideT':'Prenotate direttamente con noi','q.sideP':'Chiamateci o scriveteci — vi risponderemo personalmente, senza piattaforme di prenotazione in mezzo.','q.tel':'Telefono',
+  'q.name':'Nome e cognome','q.in':'Arrivo','q.out':'Partenza','q.adults':'Adulti','q.kids':'Bambini','q.msg':'Messaggio',
+  'q.msgP':'Cosa dovremmo sapere — orario di arrivo, età dei bambini, domande…','q.send':'Invia su WhatsApp',
+  'q.ok':'WhatsApp si apre con la vostra richiesta — basta toccare Invia. Non si è aperto? <a data-wa href="#" target="_blank" rel="noopener">Apri WhatsApp</a>',
+  
+  
+  'e.name':'Inserite il vostro nome.','e.date':'Scegliete una data.','e.order':'La partenza deve essere successiva all’arrivo.','e.past':'La data non può essere nel passato.',
+  'ft.addr':'Poljane 62, 51414 Opatija, Croazia','ft.managed':'Gestita da Davorowski Holiday Homes','ft.explore':'Esplora','ft.contact':'Contatti','ft.top':'Torna su ↑'
 };
 const EN_EXTRA = {
   'menu':'Menu','g.less':'Show fewer','g.filter':'Filter photos','g.lb':'Photo viewer','g.close':'Close','g.prev':'Previous photo','g.next':'Next photo',
   'q.msgP':'Anything we should know — arrival time, ages of children, questions…',
-  'q.sending':'Sending…','q.ok':'Thank you — your inquiry has been sent. We’ll reply shortly.',
-  'q.demo':'Demo mode: this form isn’t connected yet, so nothing was sent. Please check availability on <a data-book href="#" target="_blank" rel="noopener">Booking.com</a>.',
-  'q.bad':'Something went wrong. Please try again or book on <a data-book href="#" target="_blank" rel="noopener">Booking.com</a>.',
-  'e.name':'Please enter your name.','e.email':'Please enter a valid e-mail address.','e.date':'Please choose a date.','e.order':'Departure must be after arrival.','e.past':'The date can’t be in the past.','e.ok':'Please confirm your consent.'
+  'q.ok':'WhatsApp is opening with your inquiry — just tap Send. Didn’t open? <a data-wa href="#" target="_blank" rel="noopener">Open WhatsApp</a>',
+  
+  
+  'e.name':'Please enter your name.','e.date':'Please choose a date.','e.order':'Departure must be after arrival.','e.past':'The date can’t be in the past.',
 };
 
 /* Gallery: [file, category, caption key, wide?] */
@@ -1138,8 +1140,6 @@ const GAL = [
   const t = k => DICT[lang][k] ?? EN[k] ?? k;
   let lang = 'en';
 
-  function bookingUrl() { return CONFIG.booking + (CONFIG.bookingSuffix[lang] || '.html'); }
-  function wireBook(root = document) { $$('[data-book]', root).forEach(a => a.href = bookingUrl()); }
 
   function setLang(l, save = true) {
     lang = DICT[l] ? l : 'en';
@@ -1148,7 +1148,6 @@ const GAL = [
     $$('[data-i18n-alt]').forEach(el => { el.alt = t(el.dataset.i18nAlt); });
     $$('[data-i18n-attr]').forEach(el => el.dataset.i18nAttr.split(';').forEach(p => { const [a, k] = p.split(':'); el.setAttribute(a, t(k)); }));
     $$('.langs button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
-    wireBook();
     renderGallery();
     if (save) try { localStorage.setItem('vz-lang', lang); } catch (e) {}
   }
@@ -1276,13 +1275,11 @@ const GAL = [
     return !key;
   }
   function validate() {
-    const name = $('#f-name'), email = $('#f-email'), ok = $('#f-ok');
+    const name = $('#f-name');
     const r = [
       setErr(name, 'e-name', name.value.trim().length < 2 ? 'e.name' : null),
-      setErr(email, 'e-email', /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim()) ? null : 'e.email'),
       setErr(fIn, 'e-in', !fIn.value ? 'e.date' : fIn.value < iso ? 'e.past' : null),
-      setErr(fOut, 'e-out', !fOut.value ? 'e.date' : (fIn.value && fOut.value <= fIn.value) ? 'e.order' : null),
-      setErr(ok, 'e-ok', ok.checked ? null : 'e.ok')
+      setErr(fOut, 'e-out', !fOut.value ? 'e.date' : (fIn.value && fOut.value <= fIn.value) ? 'e.order' : null)
     ];
     return r.every(Boolean);
   }
@@ -1292,33 +1289,27 @@ const GAL = [
 
   function setStatus(kind, key) {
     status.hidden = false; status.className = 'status ' + kind;
-    status.innerHTML = t(key); wireBook(status);
+    status.innerHTML = t(key);
   }
-  form.addEventListener('submit', async e => {
+  form.addEventListener('submit', e => {
     e.preventDefault(); tried = true;
     if (!validate()) { const bad = $('[aria-invalid="true"]', form); bad && bad.focus(); return; }
-    if (form._honey.value) return;
-    if (!CONFIG.inquiryEmail) { setStatus('demo', 'q.demo'); return; }
-    const btn = $('#f-submit'), label = btn.querySelector('span');
-    btn.disabled = true; label.textContent = t('q.sending');
-    const d = new FormData(form);
-    const payload = {
-      _subject: `Upit — Villa Žiganto: ${d.get('arrival')} → ${d.get('departure')}`,
-      _replyto: d.get('email'), _template: 'table', _captcha: 'false',
-      'Ime i prezime': d.get('name'), 'E-mail': d.get('email'), 'Telefon': d.get('phone') || '—',
-      'Dolazak': d.get('arrival'), 'Odlazak': d.get('departure'),
-      'Odrasli': d.get('adults'), 'Djeca': d.get('children'),
-      'Poruka': d.get('message') || '—', 'Jezik gosta': lang.toUpperCase()
-    };
-    try {
-      const r = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(CONFIG.inquiryEmail), {
-        method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload)
-      });
-      const j = await r.json().catch(() => ({}));
-      if (!r.ok || j.success === 'false' || j.success === false) throw new Error('send');
-      form.reset(); tried = false; setStatus('ok', 'q.ok');
-    } catch (err) { setStatus('bad', 'q.bad'); }
-    finally { btn.disabled = false; label.textContent = t('q.send'); }
+    const d = new FormData(form), date = v => v.split('-').reverse().join('.') + '.';
+    const msg = d.get('message').trim();
+    // Croatian labels — the message is read by the host.
+    const text = [
+      'Upit — Villa Žiganto',
+      'Ime: ' + d.get('name').trim(),
+      'Dolazak: ' + date(d.get('arrival')),
+      'Odlazak: ' + date(d.get('departure')),
+      'Odrasli: ' + d.get('adults') + ', djeca: ' + d.get('children'),
+      msg && 'Poruka: ' + msg,
+      'Jezik gosta: ' + lang.toUpperCase()
+    ].filter(Boolean).join('\n');
+    const url = CONFIG.whatsapp + '?text=' + encodeURIComponent(text);
+    setStatus('ok', 'q.ok');
+    $('[data-wa]', status).href = url;
+    window.open(url, '_blank', 'noopener');
   });
 
   /* ---------- init ---------- */

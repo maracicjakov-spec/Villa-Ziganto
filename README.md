@@ -17,14 +17,14 @@ No build step. Deploy the folder to Vercel as a static site. Local preview: `npx
 
 ## Before going live
 
-1. **Inquiry e-mail:** set `CONFIG.inquiryEmail` at the top of the script. While it is empty, the form validates normally but shows an honest "demo mode — nothing was sent" message with a Booking.com link. Once set, inquiries go through FormSubmit (`formsubmit.co/ajax/<email>`) with Croatian labels for the host. The first submission triggers a FormSubmit activation e-mail that must be confirmed.
+1. **Inquiries → WhatsApp:** the form (name, dates, adults, children, message) opens WhatsApp (`CONFIG.whatsapp` = wa.me/38598297179) with a prefilled Croatian message; the guest only taps Send. No e-mail service, nothing to activate. Phone, WhatsApp and e-mail (arnold.ziganto@gmail.com) are shown as plain contacts. No Booking.com links anywhere (owner wants direct bookings, no commission); the Booking rating is still quoted as text.
 2. **Domain:** canonical, og:url, og:image and JSON-LD use the placeholder `https://villa-ziganto.vercel.app/`. og:image must stay an absolute URL.
 3. **Photos:** all photos come from the Booking.com gallery (72 photos, downloaded at 2500 px). Get the owner's / agency's permission.
 4. **Rating:** 10/10 from 2 reviews is an October 2026 snapshot and is labelled as such.
 
 ## Languages
 
-EN default. Order: `?lang=` → saved choice (localStorage `vz-lang`) → browser language. Each language links to its own Booking.com page (`.en-gb`, `.de`, `.hr`, `.it`). The desktop nav appears from 1280 px (below that: burger menu + bottom bar), so the longer DE/IT labels fit on one line.
+EN default. Order: `?lang=` → saved choice (localStorage `vz-lang`) → browser language.en-gb`, `.de`, `.hr`, `.it`). The desktop nav appears from 1280 px (below that: burger menu + bottom bar), so the longer DE/IT labels fit on one line.
 
 ## Verified facts (Booking.com listing)
 
@@ -47,7 +47,7 @@ EN default. Order: `?lang=` → saved choice (localStorage `vz-lang`) → browse
 - Washing machine/dryer are visible in the games-room photo but not listed by Booking — not mentioned.
 - Tennis court and fishing appear in Booking's generic "activities" list — not mentioned.
 - Prices: the 2027 June week showed €5,243 for 4 adults; the site shows no prices.
-- Direct phone / e-mail: not public on Booking.
+- Direct contact (from the owner, 3 Nov 2026): +385 98 297 179, arnold.ziganto@gmail.com — shown in the hero, inquiry card, footer, mobile bar and JSON-LD. Owner is elderly and not tech-savvy — keep everything on WhatsApp/phone.
 
 ## Photo map (Booking order → file)
 
