@@ -7,7 +7,7 @@ Primary source: the Booking.com listing — https://www.booking.com/hotel/hr/vil
 
 ```
 index.html        page, inline CSS + JS (EN in the markup; DE / HR / IT in the `DE`, `HR`, `IT` objects — 182 keys each)
-images/           30 MyLuxoria photos + 8 owner night photos (night-*) as WebP at 640 / 1280 / 1920 px (hero night-villa also p828/p1242) + og-image.jpg (night)
+images/           30 MyLuxoria photos + 8 owner night photos (night-*) as WebP at 640 / 1280 / 1920 px (hero villa-pool also p828/p1242) + og-image.jpg (night)
 fonts/            Fraunces + Hanken Grotesk, self-hosted woff2 (latin + latin-ext)
 favicon.svg
 vercel.json       long-cache headers for /images and /fonts
@@ -19,7 +19,7 @@ No build step. Deploy the folder to Vercel as a static site. Local preview: `npx
 
 1. **Inquiries → WhatsApp:** the form (name, dates, adults, children, message) opens WhatsApp (`CONFIG.whatsapp` = wa.me/38598297179) with a prefilled Croatian message; the guest only taps Send. No e-mail service, nothing to activate. Phone, WhatsApp and e-mail (arnold.ziganto@gmail.com) are shown as plain contacts. No Booking.com links anywhere (owner wants direct bookings, no commission); the Booking rating is still quoted as text.
 2. **Domain:** canonical, og:url, og:image and JSON-LD use the placeholder `https://villa-ziganto.vercel.app/`. og:image must stay an absolute URL.
-3. **Photos:** since 3 Nov 2026 all photos come from MyLuxoria (https://www.myluxoria.com/hr/vile-opatija/villa-ziganto, 31 photos, one duplicate dropped) at the owner's request — the old Booking.com/Davorowski photos were removed. MyLuxoria originals are only 1600 px wide, so there is no 2560 hero. Night photos (nocne/, from the owner via WhatsApp, 3 Nov 2026) are used for the hero (night-villa), day step 21:00 "The villa lights up" (night-villa-pool), outdoors (night-pool-bay), inquiry background (night-pool-wine), og-image and the gallery (38 photos).
+3. **Photos:** since 3 Nov 2026 all photos come from MyLuxoria (https://www.myluxoria.com/hr/vile-opatija/villa-ziganto, 31 photos, one duplicate dropped) at the owner's request — the old Booking.com/Davorowski photos were removed. MyLuxoria originals are only 1600 px wide, so there is no 2560 hero. Night photos (nocne/, from the owner via WhatsApp, 3 Nov 2026) are used for day step 21:00 "The villa lights up" (night-villa-pool), outdoors (night-pool-bay), inquiry background (night-pool-wine), og-image and the gallery (38 photos).
 4. **Rating:** 10/10 from 2 reviews is an October 2026 snapshot and is labelled as such.
 
 ## Languages
@@ -51,8 +51,8 @@ EN default. Order: `?lang=` → saved choice (localStorage `vz-lang`) → browse
 
 ## Photo map (MyLuxoria page order → file)
 
-ml01 garden-olive · ml02 villa-pool (outdoors, gallery) · ml03 pool-edge (location) · ml04 pool-shower (day 10:00) · ml06 balcony-view (intro, day 08:00) · ml07 exterior-pool (intro) · ml08 living-sofa · ml09 living-tv · ml10 hall-stairs · ml11 kitchen-dining · ml12 dining-kitchen · ml13 bath-round · ml14 bedroom-print (bedroom 3) · ml15 bedroom-blue (bedroom 4) · ml16 bath-shelf · ml17/18 bedroom-leopard(-art) (gallery only) · ml19 bath-shower · ml20 bedroom-rose-view (bedroom 1) · ml21 bedroom-rose · ml22 bedroom-grey-view (bedroom 2) · ml23 bedroom-grey · ml24 bath-wood · ml25 jacuzzi-view · ml26 jacuzzi-room · ml27 terrace-lounge · ml28 pergola-dining (day 13:00, outdoors) · ml29 summer-kitchen · ml30 grill-table (kitchen block) · ml31 pool-garden.
-Night (nocne/): nocna night-villa (hero) · nocna2 night-garden-olive · nocna3 night-garden-rocks · nocna4 night-pool-bay · nocna5 night-villa-pool · nocna6 night-pool-wine · nocna7 night-jacuzzi · nocna8 night-pool-edge.
+ml01 garden-olive · ml02 villa-pool (hero, outdoors, gallery) · ml03 pool-edge (location) · ml04 pool-shower (day 10:00) · ml06 balcony-view (intro, day 08:00) · ml07 exterior-pool (intro) · ml08 living-sofa · ml09 living-tv · ml10 hall-stairs · ml11 kitchen-dining · ml12 dining-kitchen · ml13 bath-round · ml14 bedroom-print (bedroom 3) · ml15 bedroom-blue (bedroom 4) · ml16 bath-shelf · ml17/18 bedroom-leopard(-art) (gallery only) · ml19 bath-shower · ml20 bedroom-rose-view (bedroom 1) · ml21 bedroom-rose · ml22 bedroom-grey-view (bedroom 2) · ml23 bedroom-grey · ml24 bath-wood · ml25 jacuzzi-view · ml26 jacuzzi-room · ml27 terrace-lounge · ml28 pergola-dining (day 13:00, outdoors) · ml29 summer-kitchen · ml30 grill-table (kitchen block) · ml31 pool-garden.
+Night (nocne/): nocna night-villa (gallery, og-image) · nocna2 night-garden-olive · nocna3 night-garden-rocks · nocna4 night-pool-bay · nocna5 night-villa-pool · nocna6 night-pool-wine · nocna7 night-jacuzzi · nocna8 night-pool-edge.
 ml05 = duplicate of ml01, not used. Portrait photos: bath-*, bedroom-leopard, pergola-dining (frames crop them with object-fit).
 
 Note: the photos show five differently styled bedrooms (ml14, ml17/18, ml20/21, ml22/23, ml15) while Booking lists four — confirm with the owner.

@@ -19,8 +19,8 @@
 
 <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="images/night-villa-p828.webp" media="(max-width: 760px)" imagesrcset="images/night-villa-p828.webp 828w, images/night-villa-p1242.webp 1242w" imagesizes="100vw">
-<link rel="preload" as="image" href="images/night-villa-1920.webp" media="(min-width: 761px)" imagesrcset="images/night-villa-1280.webp 1280w, images/night-villa-1920.webp 1920w" imagesizes="100vw">
+<link rel="preload" as="image" href="images/villa-pool-p828.webp" media="(max-width: 760px)" imagesrcset="images/villa-pool-p828.webp 828w, images/villa-pool-p1242.webp 1242w" imagesizes="100vw">
+<link rel="preload" as="image" href="images/villa-pool-1920.webp" media="(min-width: 761px)" imagesrcset="images/villa-pool-1280.webp 1280w, images/villa-pool-1920.webp 1920w" imagesizes="100vw">
 
 <script type="application/ld+json">
 {
@@ -150,7 +150,7 @@ p{margin:0}
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:var(--paper);background:var(--ink);overflow:hidden;isolation:isolate}
 .hero__media{position:absolute;inset:0;z-index:-2}
-.hero__media img{width:100%;height:100%;object-fit:cover;object-position:45% 60%;transform:scale(1.06);animation:heroIn 2.6s var(--ease-out) .1s forwards}
+.hero__media img{width:100%;height:100%;object-fit:cover;object-position:62% 50%;transform:scale(1.06);animation:heroIn 2.6s var(--ease-out) .1s forwards}
 @keyframes heroIn{to{transform:scale(1)}}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
   linear-gradient(90deg,rgba(14,22,30,.55) 0%,rgba(14,22,30,.15) 55%,rgba(14,22,30,0) 75%),linear-gradient(180deg,rgba(14,22,30,.5) 0%,rgba(14,22,30,0) 20%,rgba(14,22,30,0) 38%,rgba(14,22,30,.55) 70%,rgba(14,22,30,.92) 100%)}
@@ -461,8 +461,8 @@ figure{margin:0}
 <section class="hero" id="top">
   <div class="hero__media">
     <picture>
-      <source media="(max-width: 760px)" srcset="images/night-villa-p828.webp 828w, images/night-villa-p1242.webp 1242w" sizes="100vw">
-      <img src="images/night-villa-1920.webp" srcset="images/night-villa-1280.webp 1280w, images/night-villa-1920.webp 1920w" sizes="100vw" width="1920" height="1280" fetchpriority="high" decoding="async" data-i18n-alt="alt.hero" alt="Villa Žiganto at night: lit terraces and the illuminated pool under a deep blue evening sky">
+      <source media="(max-width: 760px)" srcset="images/villa-pool-p828.webp 828w, images/villa-pool-p1242.webp 1242w" sizes="100vw">
+      <img src="images/villa-pool-1920.webp" srcset="images/villa-pool-1280.webp 1280w, images/villa-pool-1920.webp 1920w" sizes="100vw" width="1920" height="1280" fetchpriority="high" decoding="async" data-i18n-alt="alt.hero" alt="Villa Žiganto: the white two-storey villa beside its private pool under a deep blue sky">
     </picture>
   </div>
   <div class="wrap hero__in">
@@ -885,7 +885,7 @@ const DE = {
   'hero.title':'Über der <em>Kvarner Bucht</em>',
   'hero.lead':'Eine private Villa mit eigenem Pool, 250&nbsp;m² voller Licht und der ganzen Bucht zu Ihren Füßen — sieben Kilometer oberhalb von Opatija.',
   'm.area':'Wohnfläche','m.beds':'Schlafzimmer &amp; Bäder','m.poolv':'Privat','m.pool':'Pool mit Meerblick','m.rating':'Booking.com · 2 Bewertungen',
-  'alt.hero':'Villa Žiganto am Abend: beleuchtete Terrassen und Pool unter tiefblauem Abendhimmel',
+  'alt.hero':'Villa Žiganto: die weiße zweistöckige Villa am privaten Pool unter tiefblauem Himmel',
   'intro.label':'01 — Die Villa',
   'intro.title':'Ländliche Ruhe. <em>Die Adria</em> in jedem Fenster.',
   'intro.p1':'Die Villa Žiganto liegt im Dorf Poljane, in den grünen Hügeln über Opatija — ein ruhiger, privater Rückzugsort mit Blick auf die Adria und die Kvarner Bucht aus fast jeder Ecke.',
@@ -952,7 +952,7 @@ const HR = {
   'hero.title':'Iznad <em>Kvarnerskog zaljeva</em>',
   'hero.lead':'Privatna vila s vlastitim bazenom, 250&nbsp;m² prostora punog svjetla i cijeli zaljev pod vama — sedam kilometara iznad Opatije.',
   'm.area':'Stambeni prostor','m.beds':'Spavaće sobe i kupaonice','m.poolv':'Privatni','m.pool':'Bazen s pogledom na more','m.rating':'Booking.com · 2 recenzije',
-  'alt.hero':'Vila Žiganto noću: osvijetljene terase i bazen pod tamnoplavim večernjim nebom',
+  'alt.hero':'Vila Žiganto: bijela dvokatnica uz privatni bazen pod tamnoplavim nebom',
   'intro.label':'01 — Vila',
   'intro.title':'Mir sela. <em>Jadran</em> u svakom prozoru.',
   'intro.p1':'Villa Žiganto smještena je u selu Poljane, u zelenim brdima iznad Opatije — mirno, privatno utočište s pogledom na Jadran i Kvarnerski zaljev iz gotovo svakog kutka.',
@@ -1019,7 +1019,7 @@ const IT = {
   'hero.title':'Sopra il <em>Golfo del Quarnero</em>',
   'hero.lead':'Una villa privata con piscina propria, 250&nbsp;m² di spazi luminosi e tutto il golfo ai vostri piedi — sette chilometri sopra Opatija.',
   'm.area':'Superficie abitabile','m.beds':'Camere e bagni','m.poolv':'Privata','m.pool':'Piscina vista mare','m.rating':'Booking.com · 2 recensioni',
-  'alt.hero':'Villa Žiganto di sera: terrazze illuminate e piscina accesa sotto un cielo blu intenso',
+  'alt.hero':'Villa Žiganto: la villa bianca su due piani accanto alla piscina privata sotto un cielo blu intenso',
   'intro.label':'01 — La villa',
   'intro.title':'La quiete della campagna. <em>L’Adriatico</em> in ogni finestra.',
   'intro.p1':'Villa Žiganto si trova nel villaggio di Poljane, sulle verdi colline sopra Opatija — un rifugio tranquillo e riservato, con vista sull’Adriatico e sul Golfo del Quarnero da quasi ogni angolo.',
