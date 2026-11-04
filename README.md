@@ -18,7 +18,7 @@ No build step. Deploy the folder to Vercel as a static site. Local preview: `npx
 ## Before going live
 
 1. **Inquiries → WhatsApp:** the form (name, dates, adults, children, message) opens WhatsApp (`CONFIG.whatsapp` = wa.me/38598297179) with a prefilled Croatian message; the guest only taps Send. No e-mail service, nothing to activate. Phone, WhatsApp and e-mail (arnold.ziganto@gmail.com) are shown as plain contacts. No Booking.com links anywhere (owner wants direct bookings, no commission); the Booking rating is still quoted as text.
-2. **Domain:** canonical, og:url, og:image and JSON-LD use the placeholder `https://villa-ziganto.vercel.app/`. og:image must stay an absolute URL.
+2. **Domain:** canonical, og:url, og:image and JSON-LD use the production domain `https://www.villa-ziganto.com/` (also in robots.txt and sitemap.xml). og:image must stay an absolute URL.
 3. **Photos:** since 3 Nov 2026 all photos come from MyLuxoria (https://www.myluxoria.com/hr/vile-opatija/villa-ziganto, 31 photos, one duplicate dropped) at the owner's request — the old Booking.com/Davorowski photos were removed. MyLuxoria originals are only 1600 px wide, so there is no 2560 hero. Night photos (nocne/, from the owner via WhatsApp, 3 Nov 2026) are used for day step 21:00 "The villa lights up" (night-villa-pool), outdoors (night-pool-bay), inquiry background (night-pool-wine), og-image and the gallery (38 photos).
 4. **Rating:** 10/10 from 2 reviews is an October 2026 snapshot and is labelled as such.
 
